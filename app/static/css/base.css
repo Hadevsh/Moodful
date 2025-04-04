@@ -1,5 +1,8 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
 
+:root {
+    --background: #1f242b;
+    --text: #fff;
 }
 
 * {
@@ -15,8 +18,9 @@
 }
   
 body {
-    background-color: #1f242b;
-    color: #fff;
+    font-family: "Lexend", sans-serif;
+    background-color: var(--background);
+    color: var(--text);
     align-items: center;
     text-align: center;
 }
