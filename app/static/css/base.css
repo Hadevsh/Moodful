@@ -35,16 +35,3 @@ body {
     align-items: center;
     height: 100vh;
 }
-
-textarea {
-    outline: none;
-    width: 50vw;
-    height: 50vh;
-    border: 2px dashed var(--lighter-background);
-    border-radius: 1rem;
-    background: transparent;
-    color: var(--text);
-    padding: 1rem;
-    vertical-align: top;
-    resize: none;
-}

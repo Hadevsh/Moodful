@@ -6,3 +6,16 @@ h1 span {
     font-size: 3.5rem;
     font-family: "Newsreader", serif;
 }
+
+textarea {
+    outline: none;
+    width: 50vw;
+    height: 50vh;
+    border: 2px dashed var(--lighter-background);
+    border-radius: 1rem;
+    background: transparent;
+    color: var(--text);
+    padding: 1rem;
+    vertical-align: top;
+    resize: none;
+}
