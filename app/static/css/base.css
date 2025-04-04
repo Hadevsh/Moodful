@@ -2,6 +2,8 @@
 
 :root {
     --background: #1f242b;
+    --lighter-background: #303842;
+    --darker-background: #16191d;
     --text: #fff;
 }
 
@@ -27,7 +29,22 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+textarea {
+    outline: none;
+    width: 50vw;
+    height: 50vh;
+    border: 2px dashed var(--lighter-background);
+    border-radius: 1rem;
+    background: transparent;
+    color: var(--text);
+    padding: 1rem;
+    vertical-align: top;
+    resize: none;
 }
