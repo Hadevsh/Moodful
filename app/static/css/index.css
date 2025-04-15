@@ -1,5 +1,6 @@
 h1 {
     font-size: 3rem;
+    animation: fadeInUp 1s ease forwards;
 }
 
 h1 span {
@@ -21,3 +22,14 @@ textarea {
     vertical-align: top;
     resize: none;
 }
+
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
