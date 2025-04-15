@@ -4,7 +4,9 @@
     --background: #1f242b;
     --lighter-background: #303842;
     --darker-background: #16191d;
-    --text: #fff;
+    --text: #ffffff;
+    --background-text: #a5a5a5;
+    --muted-text: #646464;
 }
 
 * {

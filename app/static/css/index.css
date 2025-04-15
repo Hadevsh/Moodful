@@ -24,6 +24,10 @@ textarea {
     resize: none;
 }
 
+textarea::placeholder {
+    color: var(--lighter-background);
+}
+
 @keyframes fadeInUp {
     0% {
       opacity: 0;
