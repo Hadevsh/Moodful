@@ -10,12 +10,13 @@ h1 span {
 
 textarea {
     font-family: "Lexend", sans-serif;
+    font-size: 1.5rem;
     font-weight: 500;
     outline: none;
     width: 50vw;
     height: 50vh;
-    border: 2px dashed var(--lighter-background);
-    border-radius: 1rem;
+    border: 1px solid var(--lighter-background);
+    border-radius: 0.5rem;
     background: transparent;
     color: var(--text);
     padding: 1rem;
