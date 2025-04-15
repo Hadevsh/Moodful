@@ -22,6 +22,7 @@ textarea {
     padding: 1rem;
     vertical-align: top;
     resize: none;
+    animation: fadeInUp 0.5s ease forwards;
 }
 
 textarea::placeholder {
