@@ -7,8 +7,10 @@
 <div class="container">
     <h1>Welcome to <span>Moodful</span></h1>
     <div class="content">
-        <textarea name="text" id="text" placeholder="How do you feel?"></textarea>
-        <p>Words: <span id="word-count"></span></p>
+        <textarea name="text-area" id="text-area" placeholder="How do you feel?"></textarea>
+        <p>Words: <span id="word-count">0</span></p>
     </div>
 </div>
+
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
 {% endblock %}
