@@ -14,6 +14,7 @@ function countWords() {
     var charCountNoSpace = textAreaValue.replace(regex, '').length;
 
     document.getElementById('word-count').innerHTML = `${wordCount}`;
+    document.getElementById('char-count').innerHTML = `${charCountNoSpace}`;
 };
 
 const textArea = document.getElementById('text-area');
