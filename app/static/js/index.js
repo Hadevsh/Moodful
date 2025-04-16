@@ -4,6 +4,7 @@ function countWords() {
 
     if (textAreaValue.length == 0) {
         document.getElementById('word-count').innerHTML = `0`;
+        document.getElementById('char-count').innerHTML = `0`;
         return;
     }
 
