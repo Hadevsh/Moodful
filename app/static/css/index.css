@@ -36,6 +36,7 @@ textarea::placeholder {
 .content p {
     color: var(--background-text);
     margin: 1rem 0;
+    animation: fadeInUp 0.3s ease forwards;
 }
 
 @keyframes fadeInUp {
