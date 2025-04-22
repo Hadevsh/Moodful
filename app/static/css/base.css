@@ -34,6 +34,15 @@ body {
     text-align: center;
 }
 
+button {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1.2rem;
+    font-size: 1.2rem;
+    background-color: var(--darker-background);
+    color: var(--background-text);
+}
+
 .container {
     display: flex;
     flex-direction: column;
