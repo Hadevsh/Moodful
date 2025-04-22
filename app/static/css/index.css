@@ -33,8 +33,11 @@ textarea::placeholder {
     text-align: left;
 }
 
-.content p {
+.content .controls {
+    display: flex;
+    flex-direction: row;
     color: var(--background-text);
+    gap: 3rem;
     margin: 1rem 0;
     animation: fadeInUp 0.3s ease forwards;
 }
