@@ -41,6 +41,13 @@ button {
     font-size: 1.2rem;
     background-color: var(--darker-background);
     color: var(--background-text);
+    transition: color 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--lighter-background);
+    color: var(--text);
 }
 
 .container {
