@@ -76,3 +76,13 @@ button:hover {
     cursor: pointer;
     background: var(--lighter-background);
 }
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    color: var(--background-text);
+    text-align: center;
+}

@@ -12,6 +12,9 @@
 <body>
 
     {% block content %}{% endblock %} <!-- Each sub-page has it's own block -->
+    <footer>
+        Powered by Wiktor Skrzynecki
+    </footer>
 
     <script src="{{ url_for('static', filename='js/base.js') }}"></script> <!-- Base script (for all sub-pages) -->
 </body>
