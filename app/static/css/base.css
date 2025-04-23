@@ -50,6 +50,17 @@ button:hover {
     color: var(--text);
 }
 
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--background-text);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--text)
+}
+
 .container {
     display: flex;
     flex-direction: column;
