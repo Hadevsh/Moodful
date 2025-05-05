@@ -33,18 +33,12 @@ textarea::placeholder {
     text-align: left;
 }
 
-.content .controls {
-    display: flex;
-    flex-direction: row;
+.stats {
+    padding: 1rem;
     color: var(--background-text);
-    gap: 3rem;
-    margin: 1rem 0;
-    /* justify-content: flex-end; */
-    animation: fadeInUp 0.3s ease forwards;
-}
-
-.content .controls .submit {
-    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    animation: fadeInUp 0.2s ease forwards;
 }
 
 @keyframes fadeInUp {
