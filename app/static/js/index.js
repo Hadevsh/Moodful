@@ -37,7 +37,5 @@ async function analyzeText() {
     });
 
     const result = await response.json();
-    document.getElementById("sentiment-output").innerHTML = `
-        <strong>Polarity:</strong> ${result.polarity.toFixed(2)}<br>
-        <strong>Subjectivity:</strong> ${result.subjectivity.toFixed(2)}`;
+    document.getElementById("sentiment-output").innerHTML = `<strong>Mood:</strong> <i>${result.label}</i>`;
 }
