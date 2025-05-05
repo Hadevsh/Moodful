@@ -38,6 +38,7 @@ textarea::placeholder {
     color: var(--background-text);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     animation: fadeInUp 0.2s ease forwards;
 }
 
