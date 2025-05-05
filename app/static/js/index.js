@@ -26,3 +26,18 @@ textArea.addEventListener("keypress", countWords);
 textArea.addEventListener("keyup", countWords);
 textArea.addEventListener("blur", countWords);
 textArea.addEventListener("focus", countWords);
+
+async function analyzeText() {
+    const text = document.getElementById("text-area").value;
+
+    const response = await fetch('/analyze', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: text })
+    });
+
+    const result = await response.json();
+    document.getElementById("sentiment-output").innerHTML = `
+        <strong>Polarity:</strong> ${result.polarity.toFixed(2)}<br>
+        <strong>Subjectivity:</strong> ${result.subjectivity.toFixed(2)}`;
+}
