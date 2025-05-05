@@ -43,9 +43,8 @@ async function analyzeText() {
 }
 
 function updateSentimentBar(polarity) {
-    // Convert polarity (-1 to 1) → percent (0 to 100)
     const percent = ((polarity + 1) / 2) * 100;
     const indicator = document.getElementById("sentiment-indicator");
-    indicator.style.left = `calc(${percent}% - 0.75rem)`;  // center the dot
-  }
+    indicator.style.left = `${percent}%`;
+}
   

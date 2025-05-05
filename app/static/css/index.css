@@ -75,6 +75,9 @@ textarea::placeholder {
     background-color: var(--text);
     border-radius: 50%;
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* vertically center the dot */
+    left: 0%; /* initial position */
     transition: left 0.5s ease;
 }
 
