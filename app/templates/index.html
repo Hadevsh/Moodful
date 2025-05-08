@@ -9,6 +9,10 @@
     <div class="content">
         <textarea name="text-area" id="text-area" placeholder="How do you feel?"></textarea>
         <div class="stats">
+            <div id="sentiment-chart">
+                <div class="axis x"></div>
+                <div class="axis y"></div>
+            </div>
             <div id="sentiment-output"><strong>Mood: </strong><i>Start typing...</i></div>
             <p>Words: <span id="word-count">0</span></p>
             <p>Chars: <span id="char-count">0</span></p>
@@ -23,10 +27,6 @@
                 <span>Neutral</span>
                 <span>Positive</span>
             </div>
-        </div>
-        <div id="sentiment-chart">
-            <div class="axis x"></div>
-            <div class="axis y"></div>
         </div>
     </div>
 </div>
