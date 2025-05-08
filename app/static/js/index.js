@@ -47,3 +47,29 @@ function updateSentimentBar(polarity) {
     const indicator = document.getElementById("sentiment-indicator");
     indicator.style.left = `${percent}%`;
 }
+
+// Cartesian chart
+// Sample points: [x, y] values where x and y ∈ [-1, 1]
+const points = [
+    [0, 0],
+    [1, 1],
+    [-1, 1],
+    [0.5, -0.5],
+    [-0.75, -0.25]
+];
+
+const chart = document.getElementById("sentiment-chart");
+const size = chart.offsetWidth; // assumes square chart
+const half = size / 2;
+
+points.forEach(([x, y]) => {
+    const px = half + x * half;
+    const py = half - y * half; // invert y-axis
+
+    const dot = document.createElement('div');
+    dot.className = 'point';
+    dot.style.left = `${px}px`;
+    dot.style.top = `${py}px`;
+
+    chart.appendChild(dot);
+});
