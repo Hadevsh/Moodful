@@ -47,4 +47,3 @@ function updateSentimentBar(polarity) {
     const indicator = document.getElementById("sentiment-indicator");
     indicator.style.left = `${percent}%`;
 }
-  
