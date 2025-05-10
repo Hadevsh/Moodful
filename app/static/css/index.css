@@ -89,6 +89,10 @@ textarea::placeholder {
     padding: 0 0.5rem;
 }
 
+#sentiment-output {
+    font-size: 1.5rem;
+}
+
 /* Cartesian coordinates chart */
 #sentiment-chart {
     position: relative;
@@ -125,4 +129,4 @@ textarea::placeholder {
     background: var(--lighter-background);
     border-radius: 50%;
     transform: translate(-50%, -50%);
-  }
+}
