@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, jsonify, request
 from textblob import TextBlob
 from flask_cors import CORS
+import sqlite3
 import os
 import json
 
@@ -33,19 +34,52 @@ def get_sentiment_label(polarity):
     
     return "Unknown"
 
+# Helper function to insert into the database
+def save_to_database(input_text, mood_label, polarity_score):
+    conn = sqlite3.connect("app/static/data/moodful.db")
+    cursor = conn.cursor()
+    
+    cursor.execute("""
+        INSERT INTO user_moods (input_text, predicted_mood, mood_score)
+        VALUES (?, ?, ?)
+    """, (input_text, mood_label, polarity_score))
+    
+    conn.commit()
+    conn.close()
 
 # Sentiment analysis route
 @main.route("/analyze", methods=["POST"])
 def analyze_text():
     data = request.get_json()
     text = data.get("text", "")
+    
     blob = TextBlob(text)
     sentiment = blob.sentiment
-
     label = get_sentiment_label(sentiment.polarity)
+
+    # Save to DB
+    save_to_database(text, label, sentiment.polarity)
 
     return jsonify({
         "polarity": sentiment.polarity,
         "subjectivity": sentiment.subjectivity,
         "label": label
     })
+
+# Route to retrieve mood history
+@main.route("/history", methods=["GET"])
+def get_mood_history():
+    conn = sqlite3.connect("app/static/data/moodful.db")
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT input_text, predicted_mood, mood_score, timestamp FROM user_moods ORDER BY timestamp DESC LIMIT 20")
+    data = cursor.fetchall()
+
+    conn.close()
+
+    history = [
+        {"text": row[0], "mood": row[1], "score": row[2], "timestamp": row[3]}
+        for row in data
+    ]
+    
+    return jsonify(history)

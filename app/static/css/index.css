@@ -2,11 +2,12 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.container {
-    height: 100vh;
-}
-
 .statistics {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 

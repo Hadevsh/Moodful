@@ -73,3 +73,18 @@ document.getElementById('chart-icon').addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+async function fetchMoodHistory() {
+    try {
+        const response = await fetch('/history');
+        const data = await response.json();
+        console.log("📊 Mood History:", data);
+    } catch (error) {
+        console.error("❌ Failed to fetch mood history:", error);
+    }
+}
+
+// Call it on page load
+window.onload = function () {
+    fetchMoodHistory();
+};
