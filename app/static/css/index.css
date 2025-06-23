@@ -1,3 +1,15 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    height: 100vh;
+}
+
+.statistics {
+    height: 100vh;
+}
+
 h1 {
     font-size: 3rem;
     animation: fadeInUp 1s ease forwards;
@@ -27,10 +39,6 @@ textarea {
 
 textarea::placeholder {
     color: var(--lighter-background);
-}
-
-.content {
-    text-align: left;
 }
 
 .stats {
@@ -86,11 +94,22 @@ textarea::placeholder {
     justify-content: space-between;
     font-size: 0.9rem;
     color: var(--background-text);
-    padding: 0 0.5rem;
 }
 
 #sentiment-output {
     font-size: 1.5rem;
+}
+
+.content #chart-icon {
+    font-size: 2rem;
+    color: var(--background-text);
+    cursor: pointer;
+    margin-top: 5rem;
+    transition: 0.3s color;
+}
+
+.content #chart-icon:hover {
+    color: var(--text);
 }
 
 /* Cartesian coordinates chart */
