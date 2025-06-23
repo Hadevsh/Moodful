@@ -66,3 +66,10 @@ function updateSentimentBar(polarity) {
     const indicator = document.getElementById("sentiment-indicator");
     indicator.style.left = `${percent}%`;
 }
+
+document.getElementById('chart-icon').addEventListener('click', () => {
+    window.scrollBy({
+        top: window.innerHeight,
+        behavior: 'smooth'
+    });
+});
