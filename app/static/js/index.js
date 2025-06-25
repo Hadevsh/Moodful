@@ -84,7 +84,64 @@ async function fetchMoodHistory() {
     }
 }
 
-// Call it on page load
+async function renderMoodChart() {
+    try {
+        const response = await fetch('/history');
+        const data = await response.json();
+
+        // Extract timestamps and mood scores
+        const labels = data.map(entry => new Date(entry.timestamp).toLocaleString());
+        const scores = data.map(entry => entry.score);
+
+        // Create the chart
+        const ctx = document.getElementById('mood-chart').getContext('2d');
+        const moodChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Mood Score Over Time',
+                    data: scores,
+                    borderWidth: 2,
+                    fill: false,
+                    tension: 0.3,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    pointRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        min: -1,
+                        max: 1,
+                        title: {
+                            display: true,
+                            text: 'Mood Score'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Timestamp'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Mood Tracker'
+                    }
+                }
+            }
+        });
+    } catch (error) {
+        console.error('Error fetching mood history:', error);
+    }
+}
+
+// Call on page load
 window.onload = function () {
     fetchMoodHistory();
+    renderMoodChart();
 };
