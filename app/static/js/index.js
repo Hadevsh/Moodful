@@ -103,9 +103,9 @@ async function renderMoodChart() {
                     label: 'Mood Score Over Time',
                     data: scores,
                     borderWidth: 2,
-                    fill: false,
+                    fill: true,
                     tension: 0.3,
-                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderColor: 'rgb(209, 140, 49)',
                     pointRadius: 4
                 }]
             },
@@ -115,15 +115,30 @@ async function renderMoodChart() {
                     y: {
                         min: -1,
                         max: 1,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)' // Light grid lines
+                        },
+                        ticks: {
+                            color: 'rgba(255, 255, 255, 0.1)' // Light text color
+                        },
                         title: {
                             display: true,
-                            text: 'Mood Score'
+                            text: 'Mood Score',
+                            color: 'rgba(255, 255, 255, 0.2)' // Y-axis title color
                         }
                     },
                     x: {
+                        color: '#ffffff',
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)' // Light grid lines
+                        },
+                        ticks: {
+                            color: 'rgba(255, 255, 255, 0.1)' // Light text color
+                        },
                         title: {
                             display: true,
-                            text: 'Timestamp'
+                            text: 'Timestamp',
+                            color: 'rgba(255, 255, 255, 0.2)' // X-axis title color
                         }
                     }
                 },
