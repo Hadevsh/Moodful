@@ -110,7 +110,8 @@ async function renderMoodChart() {
                 }]
             },
             options: {
-                responsive: true,
+                responsive: false,
+                maintainAspectRatio: false, // allow custom height/width
                 scales: {
                     y: {
                         min: -1,

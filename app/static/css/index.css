@@ -150,3 +150,8 @@ textarea::placeholder {
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* Chart styling */
+.statistics #mood-chart {
+    width: 80%;
+}
